@@ -32,7 +32,7 @@
 <body>
 
 <div id="container">
-    <img id="image" src="/home/tushar/Desktop/pi-vpn/android.jpeg" onclick="changeImage()" alt="Android">
+    <img id="image" src="img/android.jpeg" onclick="changeImage()" alt="Android">
     <h2 id="heading"><b>Android</h2>
     <p>Scan the QR code </p></b>
     <p>(Click on Scanner)</p> 
@@ -43,11 +43,11 @@ function changeImage() {
     var img = document.getElementById("image");
     var heading = document.getElementById("heading");
     if (img.src.match(/android/)) {
-        img.src = "/home/tushar/Desktop/pi-vpn/ios.jpeg";
+        img.src = "img/ios.jpeg";
         img.alt = "iOS";
         heading.textContent = "iOS";
     } else {
-        img.src = "/home/tushar/Desktop/pi-vpn/android.jpeg";
+        img.src = "img/android.jpeg";
         img.alt = "Android";
         heading.textContent = "Android";
     }
