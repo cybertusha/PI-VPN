@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PI-VPN</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    #container {
+        text-align: center;
+    }
+    img {
+        width: 300px; /* Adjust the width to make the image larger */
+        height: auto;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out; /* Adding transition effect */
+    }
+    img:hover {
+        transform: scale(1.1); /* Enlarge the image slightly on hover */
+    }
+    h2 {
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+
+<div id="container">
+    <img id="image" src="/home/tushar/Desktop/pi-vpn/android.jpeg" onclick="changeImage()" alt="Android">
+    <h2 id="heading"><b>Android</h2>
+    <p>Scan the QR code </p></b>
+    <p>(Click on Scanner)</p> 
+</div>
+
+<script>
+function changeImage() {
+    var img = document.getElementById("image");
+    var heading = document.getElementById("heading");
+    if (img.src.match(/android/)) {
+        img.src = "/home/tushar/Desktop/pi-vpn/ios.jpeg";
+        img.alt = "iOS";
+        heading.textContent = "iOS";
+    } else {
+        img.src = "/home/tushar/Desktop/pi-vpn/android.jpeg";
+        img.alt = "Android";
+        heading.textContent = "Android";
+    }
+}
+</script>
+
+</body>
+</html>
+
